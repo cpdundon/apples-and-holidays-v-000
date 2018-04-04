@@ -100,9 +100,12 @@ def all_holidays_with_bbq(holiday_hash)
   rtn = []
   holiday_hash.each do |k, v|
     v.each do |k_, v_|
-      if v_.contains?("BBQ")
+      if v_.index("BBQ")
+        rtn << k_
+      end
     end
   end
+  rtn
 end
 
 
