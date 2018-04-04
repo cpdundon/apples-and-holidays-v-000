@@ -80,6 +80,9 @@ def all_supplies_in_holidays(holiday_hash)
   
   holiday_hash.each do |k, v|
     k_to_s = k.to_s.gsub(/[_]/, " " )
+    if k == :new_years
+      
+    end
     k_to_s = k_to_s.split.collect { |e| e.capitalize}
     k_to_s = k_to_s.join(" ")
     
